@@ -51,7 +51,7 @@
 - 开工开机自启（`init.d`）
 - 补齐 **6 个内置铃声**（只补不覆盖）：`alarm_classic / morning / dingdong / urgent / birds / chime`
 
-### 端口占用（已避开 kongke 与华硕自带服务）
+### 端口占用（已避开华硕自带服务）
 
 | 服务 | 端口 |
 |---|---|
