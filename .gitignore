@@ -1,0 +1,20 @@
+# 构建产物 / 缓存 / 大文件（可重新生成或不应入库）
+.gradle/
+.kotlin/
+.kotlin/
+build/
+*/build/
+local.properties
+.gocache/
+.gopath/
+bin/
+*.bin
+*.txt
+*.log
+*.tmp
+
+# 说明：releases/ 下要归档发布产物，单独放行
+!releases/
+!releases/**
+!releases/**/*.tar.gz
+!releases/**/*.apk

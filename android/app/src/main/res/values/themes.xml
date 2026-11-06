@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 基础主题：不使用 ActionBar，界面全部由 Compose 绘制。
+         注意：不要在这里设置 statusBarColor / navigationBarColor 等旧 API，
+         targetSdk 35+ 已强制 edge-to-edge，由 MainActivity 的 enableEdgeToEdge() 统一处理。 -->
+    <style name="Theme.ChatRabbitAlarm" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!-- 响铃全屏页：深色背景，避免亮屏瞬间刺眼 -->
+    <style name="Theme.ChatRabbitAlarm.Ring" parent="Theme.ChatRabbitAlarm">
+        <item name="android:windowBackground">#FF121016</item>
+    </style>
+
+</resources>

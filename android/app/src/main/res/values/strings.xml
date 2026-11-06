@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">聊天兔闹钟</string>
+    <string name="default_alarm_label">闹钟</string>
+</resources>

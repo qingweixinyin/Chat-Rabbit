@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 底部导航「配网」图标：WiFi 信号 + 向下的配置箭头 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M1,9l2,2c4.97,-4.97 13.03,-4.97 18,0l2,-2C16.93,2.93 7.08,2.93 1,9z" />
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M5,13l2,2c2.76,-2.76 7.24,-2.76 10,0l2,-2C15.14,9.14 8.87,9.14 5,13z" />
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M12,15.5l-1.5,1.5 1.5,1.5 1.5,-1.5z" />
+</vector>

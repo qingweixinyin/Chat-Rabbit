@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- ==================== 网络 ==================== -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- ==================== BLE 配网 ====================
+         Android 12+：BLUETOOTH_SCAN（neverForLocation，不做位置推断）+ BLUETOOTH_CONNECT
+         Android 11 及以下：系统用定位权限管控 BLE 扫描，故需要 ACCESS_FINE_LOCATION
+         下面两条经典蓝牙权限只为 API ≤30 的扫描/连接开关（31+ 由新权限取代） -->
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_SCAN"
+        android:usesPermissionFlags="neverForLocation" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH"
+        android:maxSdkVersion="30" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_ADMIN"
+        android:maxSdkVersion="30" />
+    <uses-permission
+        android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- Android 13+ 扫描 WiFi 列表需要（neverForLocation：不用于定位推断） -->
+    <uses-permission
+        android:name="android.permission.NEARBY_WIFI_DEVICES"
+        android:usesPermissionFlags="neverForLocation" />
+
+    <!-- 配网页预填当前 WiFi SSID + WiFi 兼容自检（只读扫描，不改任何网络配置） -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="false" />
+
+    <!--
+        注意：本 App 的闹钟是「纯设备闹钟」——不在手机上调度、不响铃、不发通知。
+        因此不声明 AlarmManager / 通知 / 前台服务 / 唤醒锁 / 开机广播等权限，
+        也没有任何 Receiver / Service / 响铃 Activity。
+    -->
+    <application
+        android:name=".ChatRabbitApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ChatRabbitAlarm"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="36">
+
+        <!-- ==================== 唯一的 Activity ==================== -->
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden|uiMode"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.ChatRabbitAlarm"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
