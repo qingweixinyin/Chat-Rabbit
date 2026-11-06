@@ -30,7 +30,7 @@
 - `router/src`（Go 服务端）、`router/pkg`（安装脚本/铃声/网页）、`router/build.ps1`（交叉编译）
 - `android/`（App 源码，Kotlin + Gradle）
 - 仓库内 `router/src/main.go` 的 `const Version` 可能领先于本归档包（开发中版本），
-  **以本目录归档的 `1.7.3-fix` 为最新稳定版**；不要拿开发中版本当稳定版发布。
+  **以本目录归档的 `1.7.3-fix` 为最新稳定版**。
 
 ## 变更要点（1.7.x）
 - **1.7.3-fix**：在 1.7.3 基础上的修正包（最新稳定版）
