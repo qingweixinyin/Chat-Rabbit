@@ -16,7 +16,15 @@
 | 路由器插件包（双架构 armv7+arm64，自动按用户态位数选二进制） | **1.7.3-fix** | AC68U / BE3600 / RT-AX89X 等 koolcenter 软件中心平台（`.valid` 含 hnd/qca/arm386/arm384/arm388） | [chatrabbit-1.7.3-fix.tar.gz](releases/1.7.3-fix/chatrabbit-1.7.3-fix.tar.gz) |
 | Android App（debug） | **1.10.8** | Android 手机（`com.chatrabbit.alarm`） | [ChatRabbitAlarm-1.10.8-debug.apk](releases/1.7.3-fix/ChatRabbitAlarm-1.10.8-debug.apk) |
 
-安装方式、md5 与版本说明见 [releases/1.7.3-fix/MANIFEST.md](releases/1.7.3-fix/MANIFEST.md)。
+| 文件名 | md5 |
+|---|---|
+| `chatrabbit-1.7.3-fix.tar.gz` | `64f34b83598988392dfa81b93e032bb6` |
+| `ChatRabbitAlarm-1.10.8-debug.apk` | `9e5c8e94b2c75abed9cd7295be4fa136` |
+
+**路由器安装**：后台「软件中心」→ 离线安装 → 选 `chatrabbit-1.7.3-fix.tar.gz`（AX89X 同样用这个包，
+安装脚本会按用户态位数自动选 armv7 二进制）；装完出现 ChatRabbit 图标，控制台 `http://<路由器IP>:8898/`。
+
+**App 安装**：`adb install -r ChatRabbitAlarm-1.10.8-debug.apk`（`com.chatrabbit.alarm`，debug 签名）。
 
 ---
 
