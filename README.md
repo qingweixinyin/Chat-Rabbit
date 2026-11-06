@@ -2,7 +2,7 @@
 
 > 目标：**不刷固件**，用家里路由器接管"图灵云"，让玩具的闹钟/音乐/铃声完全由你控制。
 > 已验证硬件：杰理 AC791N 玩具（原厂固件 `AC791N_NJ_1V2`），路由器 华硕 BE3600（koolcenter 固件）。
-> 最后更新：2026-11-06（服务端 v1.7.11 / App v1.10.8）
+> 最后更新：2026-11-06（服务端 v1.7.3-fix / App v1.10.8）
 
 ---
 
@@ -10,11 +10,10 @@
 
 | 产物 | 版本 | 适用 | 下载 |
 |---|---|---|---|
-| 路由器插件包（双架构 armv7+arm64） | **1.7.11** | AC68U / BE3600 / AX 系列（koolcenter 软件中心） | [chatrabbit-1.7.11.tar.gz](releases/1.7.11/chatrabbit-1.7.11.tar.gz) |
-| 路由器插件包（AX89X 专用，仅 armv7） | **1.7.11** | RT-AX89X | [chatrabbit-1.7.11-ax89x.tar.gz](releases/1.7.11/chatrabbit-1.7.11-ax89x.tar.gz) |
-| Android App（debug） | **1.10.8** | Android 手机（`com.chatrabbit.alarm`） | [ChatRabbitAlarm-1.10.8-debug.apk](releases/1.7.11/ChatRabbitAlarm-1.10.8-debug.apk) |
+| 路由器插件包（双架构 armv7+arm64，自动按用户态位数选二进制） | **1.7.3-fix** | AC68U / BE3600 / RT-AX89X 等 koolcenter 软件中心平台（`.valid` 含 hnd/qca/arm386/arm384/arm388） | [chatrabbit-1.7.3-fix.tar.gz](releases/1.7.3-fix/chatrabbit-1.7.3-fix.tar.gz) |
+| Android App（debug） | **1.10.8** | Android 手机（`com.chatrabbit.alarm`） | [ChatRabbitAlarm-1.10.8-debug.apk](releases/1.7.3-fix/ChatRabbitAlarm-1.10.8-debug.apk) |
 
-安装方式、md5 与版本说明见 [releases/1.7.11/MANIFEST.md](releases/1.7.11/MANIFEST.md)。
+安装方式、md5 与版本说明见 [releases/1.7.3-fix/MANIFEST.md](releases/1.7.3-fix/MANIFEST.md)。
 
 ---
 
@@ -22,7 +21,7 @@
 
 | 包 | 版本 | 装在哪 | 作用 |
 |---|---|---|---|
-| `chatrabbit-1.7.11.tar.gz`（4.58 MB） | 1.7.11 | 路由器（软件中心离线安装） | 假图灵云 + 网页控制台 + 多设备管理（含双架构二进制） |
+| `chatrabbit-1.7.3-fix.tar.gz`（4.58 MB） | 1.7.3-fix | 路由器（软件中心离线安装） | 假图灵云 + 网页控制台 + 多设备管理（含双架构二进制） |
 | `ChatRabbitAlarm-1.10.8-debug.apk`（11.34 MB） | 1.10.8 | Android 手机 | 闹钟管理、铃声选择、点歌、多设备切换、BLE 配网 |
 
 **不需要**：刷机、拆机、装 Python/Entware、外网、付费云服务。
@@ -31,7 +30,7 @@
 
 ## 2. 路由器安装（一次性）
 
-1. 路由器后台（`http://192.168.3.1`）→「软件中心」→ 离线安装 → 选 `chatrabbit-1.7.11.tar.gz`（AX89X 用 `-ax89x` 版）
+1. 路由器后台（`http://192.168.3.1`）→「软件中心」→ 离线安装 → 选 `chatrabbit-1.7.3-fix.tar.gz`
 2. 装完在「软件中心」能看到 **ChatRabbit** 图标，点进去是控制台
 3. 控制台地址也可直接打开：`http://<路由器IP>:8898/`
 
